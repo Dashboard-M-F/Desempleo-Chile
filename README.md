@@ -20,13 +20,14 @@ Los dos HTML son equivalentes en contenido. Al actualizar, hay que regenerar amb
 
 ## Qué contiene el panel
 
-Siete indicadores de cabecera y seis vistas:
+Siete indicadores de cabecera y cinco vistas:
 
 - **Evolución.** Serie nacional de 85 trimestres móviles (may–jul 2019 a may–jul 2026, incluida la pandemia), con selector de rango (Máx, 5 años, 3 años, 12 meses), tabla completa y un explorador que entrega, para cualquier trimestre, su tasa, la variación respecto del trimestre anterior, la variación en doce meses y su posición en el ranking histórico.
 - **Regiones.** Las 16 regiones ordenadas por tasa, con la línea de referencia del promedio país, mayores alzas en doce meses y extremos del trimestre.
 - **Sexo e informalidad.** Brecha de desocupación e informalidad entre mujeres y hombres, más horas trabajadas y tasas de participación y ocupación.
 - **Sectores.** Variación anual del empleo por rama de actividad, en barras divergentes.
 - **Series por región.** Pequeños múltiplos con la serie histórica de cada una de las 16 regiones a escala compartida, y un comparador de hasta dos regiones contra el país.
+
 Sobre las tarjetas hay un **selector de trimestre móvil** con los 85 trimestres de la serie. Al elegir uno, la cabecera y las tarjetas muestran las cifras del INE para ese trimestre.
 
 **El panel es de solo lectura.** Las cifras están compiladas de los boletines del INE y no pueden alterarse desde la interfaz.
