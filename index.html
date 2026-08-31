@@ -279,6 +279,7 @@ footer b{color:var(--ink-2)}
     <button class="tab" role="tab" id="t-sex" aria-controls="p-sex" aria-selected="false">Sexo e informalidad</button>
     <button class="tab" role="tab" id="t-sec" aria-controls="p-sec" aria-selected="false">Sectores</button>
     <button class="tab" role="tab" id="t-zon" aria-controls="p-zon" aria-selected="false">Series por región</button>
+    <button class="tab" role="tab" id="t-com" aria-controls="p-com" aria-selected="false">¿Y las comunas?</button>
   </div>
 
   <!-- EVOLUCIÓN -->
@@ -339,7 +340,7 @@ footer b{color:var(--ink-2)}
       <div class="box"><h3>Extremos del trimestre</h3><div id="regExtremos"></div></div>
     </div>
     <p class="note" id="regNote"></p>
-    <p class="note"><b>Sobre el nivel comunal:</b> el INE no publica tasa de desocupación por comuna. El diseño muestral de la Encuesta Nacional de Empleo está construido para dominios nacional y regional, más algunas provincias y ciudades; por debajo de ese nivel las estimaciones no son publicables. Tampoco existe una estimación comunal oficial equivalente: el programa de estimaciones de área pequeña del Observatorio Social cubre pobreza, no empleo. La región es, hoy, el mayor detalle territorial disponible con calidad estadística.</p>
+    <p class="note"><b>Sobre el nivel comunal:</b> el INE no publica tasa de desocupación por comuna, y no existe un sustituto oficial. La pestaña «¿Y las comunas?» detalla las fuentes revisadas y por qué ninguna sirve como tasa comunal.</p>
   </section>
 
   <!-- SEXO -->
@@ -418,6 +419,48 @@ footer b{color:var(--ink-2)}
       <summary>Ver las series comparadas en tabla</summary>
       <div class="tablewrap"><table class="data" id="zonTable"><thead><tr id="zonTableHead"></tr></thead><tbody></tbody></table></div>
     </details>
+  </section>
+
+
+  <!-- COMUNAS -->
+  <section class="panel" role="tabpanel" id="p-com" aria-labelledby="t-com" hidden>
+    <div class="p-head">
+      <div>
+        <h2>No existe una tasa de desocupación comunal</h2>
+        <p class="p-sub">La pregunta se repite en cualquier análisis territorial, así que conviene dejar la respuesta por escrito y con fuente. En Chile ningún organismo publica desocupación por comuna, y la razón no es de voluntad sino de diseño estadístico.</p>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="box">
+        <h3>Por qué la ENE no llega a comuna</h3>
+        <p class="note" style="margin:0">La Encuesta Nacional de Empleo se diseña para dominios de estimación nacional y regional, más algunas provincias y ciudades. Por debajo de ese nivel la muestra no sostiene estimaciones publicables: el error de muestreo crece hasta hacer la cifra inutilizable. Es el mismo motivo por el que el INE tampoco difunde desagregaciones comunales de sus otras encuestas de hogares.</p>
+      </div>
+      <div class="box">
+        <h3>Qué dice el propio INE</h3>
+        <p class="note" style="margin:0">La síntesis de resultados del Censo 2024 lo plantea sin rodeos al abrir su capítulo de trabajo: «un censo no constituye el instrumento especializado para la medición del empleo». Ese rol le corresponde a la ENE, que es justamente la que no baja de la región.</p>
+      </div>
+    </div>
+
+    <div class="tablewrap" style="margin-top:18px">
+      <table class="data" id="comTable">
+        <thead><tr><th>Fuente</th><th>Institución</th><th>Llega a comuna</th><th>Mide desempleo</th></tr></thead>
+        <tbody>
+          <tr><td>Encuesta Nacional de Empleo</td><td>INE</td><td>No</td><td>Sí</td></tr>
+          <tr><td>Censo 2024 · microdatos</td><td>INE</td><td>Sí, nivel comuna-área</td><td>Parcial: condición de actividad y ocupación</td></tr>
+          <tr><td>Censo 2024 · tabulados publicados</td><td>INE</td><td>No, país y región</td><td>Parcial</td></tr>
+          <tr><td>Estimaciones de área pequeña</td><td>Observatorio Social, MDSF</td><td>Sí, 346 comunas</td><td>No, mide pobreza</td></tr>
+          <tr><td>Reportes estadísticos comunales</td><td>Biblioteca del Congreso</td><td>Sí</td><td>No, empresas y trabajadores del SII</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">Ninguna de las cinco cumple las dos condiciones a la vez: o llega a la comuna pero no mide desempleo, o mide desempleo pero no llega a la comuna.</p>
+    <p class="note"><b>La única puerta entreabierta.</b> El Censo 2024 sí preguntó por condición de actividad y ocupación, y el INE publicó en diciembre de 2025 la base de microdatos desagregada a nivel de comuna-área. Con ella se puede construir un indicador comunal propio. Pero conviene tener claro qué sería y qué no: un dato censal de stock, referido a la semana previa al levantamiento de 2024, no una tasa trimestral comparable con la ENE ni actualizable mes a mes. Serviría para ordenar comunas entre sí en un momento dado; no para seguir una coyuntura.</p>
+
+    <p class="note"><b>Recomendación práctica.</b> Para decisiones de dotación en la macrozona centro-sur, el mayor detalle territorial con calidad estadística sigue siendo la región: Biobío y Ñuble por separado, que es como el INE las publica desde 2018 y como las trae este panel. Si en algún momento se necesita una cifra por comuna, la vía defendible es encargar una estimación propia combinando el Censo 2024 con la ENE regional, etiquetada explícitamente como estimación y no como dato oficial.</p>
+
+    <p class="note" style="border-top:1px solid var(--rule);padding-top:12px">Fuentes: metodología de la Encuesta Nacional de Empleo (INE); síntesis de resultados del Censo 2024 (INE, diciembre de 2025); publicación de la base de datos del Censo 2024 (INE, 4 de diciembre de 2025); estimaciones de pobreza comunal del Observatorio Social (Ministerio de Desarrollo Social y Familia); reportes estadísticos comunales de la Biblioteca del Congreso Nacional.</p>
   </section>
 
   <footer>
