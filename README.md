@@ -20,13 +20,14 @@ Los dos HTML son equivalentes en contenido. Al actualizar, hay que regenerar amb
 
 ## Qué contiene el panel
 
-Siete indicadores de cabecera y cinco vistas:
+Siete indicadores de cabecera y seis vistas:
 
 - **Evolución.** Serie nacional de 85 trimestres móviles (may–jul 2019 a may–jul 2026, incluida la pandemia), con selector de rango (Máx, 5 años, 3 años, 12 meses), tabla completa y un explorador que entrega, para cualquier trimestre, su tasa, la variación respecto del trimestre anterior, la variación en doce meses y su posición en el ranking histórico.
 - **Regiones.** Las 16 regiones ordenadas por tasa, con la línea de referencia del promedio país, mayores alzas en doce meses y extremos del trimestre.
 - **Sexo e informalidad.** Brecha de desocupación e informalidad entre mujeres y hombres, más horas trabajadas y tasas de participación y ocupación.
 - **Sectores.** Variación anual del empleo por rama de actividad, en barras divergentes.
 - **Series por región.** Pequeños múltiplos con la serie histórica de cada una de las 16 regiones a escala compartida, y un comparador de hasta dos regiones contra el país.
+- **¿Y las comunas?** La respuesta documentada, con fuente, sobre por qué no existe una tasa de desocupación comunal y qué ofrece cada fuente alternativa.
 
 Sobre las tarjetas hay un **selector de trimestre móvil** con los 85 trimestres de la serie. Al elegir uno, la cabecera y las tarjetas muestran las cifras del INE para ese trimestre.
 
@@ -82,7 +83,19 @@ Control de consistencia aplicado: las dieciséis series regionales terminan exac
 
 ## Sobre el nivel comunal
 
-No existe en Chile una tasa de desocupación comunal oficial. El diseño muestral de la ENE está construido para dominios nacional y regional, más algunas provincias y ciudades; por debajo de ese nivel las estimaciones no son publicables. Tampoco hay un sustituto: el programa de estimaciones de área pequeña del Observatorio Social del Ministerio de Desarrollo Social cubre pobreza, no empleo, y los reportes comunales de la Biblioteca del Congreso usan registros de empresas del SII, no desempleo de personas. La región es hoy el mayor detalle territorial con calidad estadística.
+No existe en Chile una tasa de desocupación comunal, y la razón es de diseño estadístico, no de disponibilidad. El panel dedica una vista completa al tema; el resumen es el siguiente.
+
+| Fuente | Institución | Llega a comuna | Mide desempleo |
+|---|---|---|---|
+| Encuesta Nacional de Empleo | INE | No | Sí |
+| Censo 2024, microdatos | INE | Sí, nivel comuna-área | Parcial: condición de actividad y ocupación |
+| Censo 2024, tabulados publicados | INE | No, país y región | Parcial |
+| Estimaciones de área pequeña | Observatorio Social, MDSF | Sí, 346 comunas | No, mide pobreza |
+| Reportes estadísticos comunales | Biblioteca del Congreso | Sí | No, empresas y trabajadores del SII |
+
+Ninguna cumple las dos condiciones a la vez. La ENE se diseña para dominios nacional y regional, más algunas provincias y ciudades; por debajo de ese nivel el error de muestreo hace la estimación inutilizable. La síntesis de resultados del Censo 2024 lo dice de forma explícita al abrir su capítulo de trabajo: «un censo no constituye el instrumento especializado para la medición del empleo».
+
+La única vía abierta son los microdatos del Censo 2024, publicados por el INE el 4 de diciembre de 2025 con desagregación a nivel de comuna-área, que sí contienen condición de actividad y ocupación. Con ellos se puede construir un indicador comunal propio, pero sería un dato censal de stock referido a 2024, no una tasa trimestral comparable con la ENE ni actualizable mes a mes. Debería etiquetarse como estimación propia y nunca como dato oficial.
 
 ---
 
